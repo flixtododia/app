@@ -1,0 +1,32 @@
+/* style.css - customizações adicionais da página */
+
+/* Animação do botão pulsar */
+@keyframes pulsate {
+    0% {
+        box-shadow: 0 0 0 0 rgba(253, 0, 0, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 14px rgba(253, 0, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(253, 0, 0, 0);
+    }
+}
+
+.pulsante .elementor-button {
+    animation: pulsate 1.8s ease-out infinite;
+}
+
+/* Animação de scroll da esquerda */
+.scroll-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
